@@ -11,6 +11,36 @@ body {
   color: rgb(0, 0, 0, 0.8);
 }
 
+button {
+  font-family: "inter", sans-serif;
+}
+
+.separadores {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  .separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 50%;
+  }
+
+  .flor-svg {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    svg {
+      width: 100%;
+    }
+  }
+}
+
 header {
   width: 100%;
   height: auto;
@@ -20,9 +50,12 @@ header {
   padding: 1% 5%;
   position: absolute;
   z-index: 100;
+  margin-top: 1%;
 
   nav {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 70%;
 
     ul {
@@ -34,6 +67,24 @@ header {
       li {
         list-style: none;
         color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        background-color: #be8e55;
+        border: none;
+        padding: 0 2%;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255, 0.8);
+        font-size: 1.1vw;
+        padding: 0.5% 3%;
+        border-radius: 10px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
       }
     }
   }
@@ -55,12 +106,54 @@ header {
   .titulo-nome {
     /* background-color: rgb(0, 255, 255, 0.5); */
     position: absolute;
-    left: 12%;
-    top: 30%;
+    left: 8%;
+    top: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .momento {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3%;
+
+      p {
+        margin-bottom: 2%;
+        font-size: 0.8vw;
+        color: #312923;
+        letter-spacing: 12%;
+      }
+
+      .separadores {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .separador {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30%;
+          height: 100%;
+        }
+
+        .flor-svg {
+          margin: 0 2%;
+          display: flex;
+          align-items: end;
+          justify-content: center;
+
+          svg {
+            width: 80%;
+          }
+        }
+      }
+    }
 
     .titulo {
       display: flex;
@@ -71,13 +164,14 @@ header {
 
       h1 {
         font-family: "Playfair Display", sans-serif;
-        font-size: 3.8vw;
+        font-size: 4.5vw;
+        font-weight: 400;
       }
 
       h2 {
         width: 80%;
         display: flex;
-        font-weight: 200;
+        font-weight: 300;
         letter-spacing: 15%;
         font-size: 2.5vw;
         flex-wrap: wrap;
@@ -85,72 +179,87 @@ header {
       }
     }
 
-    .whatsapp {
-      background-color: rgb(245, 200, 197);
+    button {
+      background-color: #d29955;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       margin: 5% 0 0 0;
       padding: 2.5% 6%;
-      border-radius: 4px;
-      border: 0 solid #000;
-
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-
-      p {
-        font-size: 1.2vw;
-      }
+      border-radius: 20px;
+      border: none;
+      box-shadow: 0 13px 18.4px 0 rgba(0, 0, 0, 0.25);
+      color: #fbf2eb;
+      /* font-family: "inter", sans-serif; */
     }
   }
 
   .cuidados {
-    width: 70%;
-    height: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1%;
+    width: 80%;
+    height: auto;
+    background: rgba(252, 244, 243, 0.3);
     margin: 0 0 2% 0;
+    padding: 1%;
     border-radius: 30px;
-    border: 0 solid #000;
-    background: rgba(249, 229, 229, 0.2);
-    box-shadow: 6px 8px 9.7px 0 rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
+    box-shadow: 6px 8px 10px 0 rgba(0, 0, 0, 0.25);
 
-    h3,
-    .parte {
-      color: #6f5b5b;
-      text-align: center;
-      font-size: 20px;
-      font-weight: 300;
+    img {
+      width: 20%;
+    }
+
+    .seta {
+      width: 15%;
     }
 
     .cuidado {
-      width: 100%;
+      width: 33%;
       display: flex;
+      gap: 5%;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
 
       .parte {
-        width: 33%;
-        padding: 2%;
         display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+        gap: 4px;
+        flex-direction: column;
+        width: 50%;
 
-      .parte:not(:last-child) {
-        border-right: 1px solid #000;
+        h3 {
+          font-size: 1.5vw;
+          color: #6f5b5b;
+          font-weight: 500;
+        }
+
+        p {
+          font-size: 0.9vw;
+          color: #6f5b5b;
+        }
       }
     }
+
+    .cuidado:not(:last-child) {
+      border-right: 1px solid #000;
+    }
   }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #fff 0%, rgba(153, 153, 153, 0) 27.99%);
 }
 
 .secao2 {
   background-color: #f5c8c5;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 3%;
 
   .linhas {
     position: absolute;
@@ -172,6 +281,7 @@ header {
 
     span {
       color: #f862bc;
+      font-style: italic;
     }
   }
 
@@ -207,7 +317,7 @@ header {
         justify-content: space-around;
         border-radius: 40px;
         background-color: rgba(255, 255, 255, 0.45);
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        box-shadow: 6px 8px 10px 0 rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(6.300000190734863px);
         position: relative;
 
@@ -221,7 +331,7 @@ header {
           align-items: center;
           justify-content: center;
           position: absolute;
-          top: -12%;
+          top: -10%;
           font-size: 2vw;
           filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))
             drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
@@ -257,44 +367,299 @@ header {
   width: 100%;
   height: 100vh;
   background-image: url(./images/secao3-fundo.webp);
-  background-size: cover;
   background-position: center;
-  padding: 8% 15%;
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: baseline;
+  position: relative;
 
-  .merece-cuidado {
-    width: 50%;
+  .rosto {
+    position: absolute;
+    margin: 0 0 0 2%;
+
+    path {
+      opacity: 0.4;
+    }
+  }
+
+  .cuidados {
+    margin: 0 0 0 18%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    color: #3b2740;
 
-    h3 {
+    h2 {
       font-family: "Playfair Display", sans-serif;
-      font-size: 2.5vw;
-      margin: 0 0 18% 0;
+      font-size: 3.5vw;
+      text-align: center;
+      font-weight: 400;
+
+      span {
+        color: #be8e55;
+        font-style: italic;
+      }
     }
 
-    .caixa-cuide {
+    .separadores {
+      margin: 5% 0 7% 0;
+    }
+
+    .flor-svg {
+      margin: 0 3%;
+
+      path {
+        stroke: #be8e55;
+      }
+    }
+
+    .separador {
+      width: 40%;
+
+      path {
+        stroke: #3b2740;
+      }
+    }
+
+    .cuidado {
       display: flex;
       flex-direction: column;
-      align-items: baseline;
-      gap: 70px;
 
-      .cuide-se {
-        width: 100%;
+      .cuide {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        gap: 15px;
+        justify-content: center;
+        flex-direction: row;
 
-        img {
-          width: 15%;
+        .img {
+          border-right: 1px solid #be8e55;
+          padding-right: 5%;
         }
 
-        p {
-          font-size: 2vw;
+        .parte {
+          display: flex;
+          flex-direction: column;
+          /* background-color: #f862bc; */
+          margin: 4% 2%;
+
+          h3 {
+            font-size: 1.4vw;
+            font-weight: 400;
+            margin-bottom: 3%;
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    background-color: #d29955;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 5% 0 0 0;
+    padding: 2.5% 6%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 13px 18.4px 0 rgba(0, 0, 0, 0.25);
+    color: #fbf2eb;
+    /* font-family: "inter", sans-serif; */
+  }
+}
+
+.secao4 {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(
+    180deg,
+    #efd2cc 0%,
+    #f5dfd9 35%,
+    #f9ebe6 65%,
+    #fff7f4 100%
+  );
+
+  .titulo-secao4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0;
+
+    h3 {
+      color: #f862bc;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 4vw;
+      color: #3b2740;
+      font-weight: 400;
+      font-family: "Playfair Display", sans-serif;
+
+      span {
+        color: #be8e55;
+        font-style: italic;
+      }
+    }
+
+    .separadores {
+      margin: 5% 0 7% 0;
+    }
+
+    .flor-svg {
+      margin: 0 3%;
+
+      path {
+        stroke: #f862bc;
+      }
+    }
+
+    .separador {
+      width: 40%;
+
+      path {
+        stroke: #3b2740;
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .area {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8% 1% 8%;
+
+      h3 {
+        color: #be8e55;
+        font-weight: 400;
+        letter-spacing: 6px;
+        font-size: 1.5vw;
+      }
+
+      .botoes-prvnext {
+        display: flex;
+        gap: 15px;
+
+        button {
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          border: none;
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        button:first-child {
+          background-color: #fcf4f3;
+          path {
+            stroke: #ebb1ba;
+          }
+        }
+        button:last-child {
+          background-color: #ebb1ba;
+          path {
+            stroke: #fefefe;
+          }
+        }
+      }
+    }
+
+    .cards {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5% 10% 5%;
+
+      .card {
+        width: 18%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: #fcf4f3;
+        border-radius: 10px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        position: relative;
+
+        .destaque {
+          background-color: #fcf4f3;
+          position: absolute;
+          border-radius: 20px;
+          padding: 2% 5%;
+          right: 0;
+          top: -5%;
+          font-weight: 400;
+
+          svg {
+            width: 30%;
+            height: auto;
+          }
+
+          div:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10%;
+          }
+          p:last-child {
+            color: #be8e55;
+          }
+        }
+
+        .img-card {
+          width: 100%;
+          height: 60%;
+
+          img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+          }
+        }
+
+        .servicos-card {
+          width: 80%;
+          height: 18vh;
+          margin: 5%;
+          display: flex;
+          gap: 10%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          h3 {
+            text-align: center;
+            color: #3b2740;
+          }
+
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+              color: #be8e55;
+            }
+          }
         }
       }
     }
