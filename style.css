@@ -8,9 +8,6 @@
 
 html {
   overflow-x: hidden;
-}
-
-body {
   font-family: "inter", sans-serif;
   color: rgb(0, 0, 0, 0.8);
 }
@@ -593,11 +590,11 @@ header {
     }
 
     .swiper,
-    .swiper-2 {
+    .swiper-2,
+    .swiper-3 {
       width: 100%;
       height: auto;
-
-      padding: 5%;
+      padding: 5% 5% 0 5%;
 
       .card {
         min-width: 18%;
@@ -682,6 +679,62 @@ header {
         box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
         border: 3px solid #be8e55;
       }
+    }
+
+    .swiper {
+      padding: 5% 5% 5% 5%;
+    }
+
+    .swiper-2,
+    .swiper-3 {
+      /* background-color: #f862bc; */
+      padding: 5% 5% 0 5%;
+      margin-bottom: 0;
+    }
+
+    .swiper-pagination-2,
+    .swiper-pagination-3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5%;
+    }
+  }
+
+  .cuide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+
+    h2 {
+      font-family: "Playfair Display", sans-serif;
+      font-size: 3vw;
+      text-align: center;
+      font-weight: 400;
+      color: #3b2740;
+      margin-bottom: 5%;
+
+      span {
+        color: #f862bc;
+        font-style: italic;
+      }
+    }
+
+    button {
+      background-color: #be8e55;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      padding: 3% 5%;
+      color: #fcf4f3;
+      font-weight: 400;
+      border-radius: 15px;
+      gap: 5px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      font-size: 1.2vw;
     }
   }
 }
