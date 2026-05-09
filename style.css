@@ -27,7 +27,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 15%;
+    margin: 0 0.5%;
+    /* width: 15%; */
     height: 50%;
   }
 
@@ -254,6 +255,14 @@ header {
   background: linear-gradient(180deg, #fff 0%, rgba(153, 153, 153, 0) 27.99%);
 }
 
+.linhas {
+  position: absolute;
+  width: 100%;
+  top: -10%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
 .secao2 {
   background-color: #f5c8c5;
   position: relative;
@@ -261,14 +270,6 @@ header {
   flex-direction: column;
   justify-content: center;
   padding-top: 3%;
-
-  .linhas {
-    position: absolute;
-    width: 100%;
-    top: -10%;
-    z-index: 0;
-    opacity: 0.5;
-  }
 
   h2 {
     text-align: center;
@@ -706,7 +707,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 
     h2 {
       font-family: "Playfair Display", sans-serif;
@@ -736,5 +737,240 @@ header {
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
       font-size: 1.2vw;
     }
+  }
+}
+
+.secao5 {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+
+  .imagem-fundo {
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/secao5-fundo.webp);
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .sobre-nos {
+    background-color: #fcf0f3;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding: 8%;
+    gap: 10%;
+  }
+
+  h3 {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 400;
+    color: #f862bc;
+  }
+
+  h2 {
+    width: 60%;
+    font-family: "Playfair Display", sans-serif;
+    color: #3b2740;
+    font-weight: 500;
+  }
+
+  .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 12%;
+  }
+}
+
+.secao6 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5c8c5;
+  position: relative;
+  padding: 0 5%;
+
+  .titulo-secao6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0;
+
+    h3 {
+      color: #f862bc;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 4vw;
+      color: #3b2740;
+      font-weight: 400;
+      font-family: "Playfair Display", sans-serif;
+
+      span {
+        color: #be8e55;
+        font-style: italic;
+      }
+    }
+
+    .separadores {
+      margin: 5% 0 20% 0;
+    }
+
+    .flor-svg {
+      margin: 0 1%;
+
+      path {
+        stroke: #f862bc;
+      }
+    }
+
+    .separador {
+      width: 25%;
+
+      path {
+        stroke: #3b2740;
+      }
+    }
+  }
+
+  .especialistas {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    .especialista {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5% 0;
+      gap: 5%;
+
+      .div-esquerda {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .conteiner-medalha {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: -45%;
+
+          .medalha {
+            width: 40vw;
+            aspect-ratio: 1 / 1;
+
+            background-color: rgb(247, 143, 205, 0.2);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            animation: gira 15s linear infinite;
+          }
+
+          .logo {
+            width: 7vw;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            background-color: #fcb5c2;
+            border-radius: 50%;
+
+            img {
+              width: 70%;
+            }
+          }
+        }
+
+        .pessoa {
+          z-index: 2;
+          border-radius: 28px;
+
+          img {
+            border-radius: 28px;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+
+      .sobre {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+        h3 {
+          font-family: "Playfair Display", sans-serif;
+          color: #f862bc;
+          font-weight: 400;
+          font-size: 1vw;
+          padding: 3% 0;
+        }
+
+        h2 {
+          font-family: "Playfair Display", sans-serif;
+          padding: 3% 0;
+          font-size: 1.5vw;
+        }
+
+        .texto-sobre {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            margin: 1% 0;
+          }
+        }
+      }
+    }
+  }
+
+  .shirlaini {
+    .div-esquerda {
+      .conteiner-medalha {
+        left: -70%;
+      }
+    }
+  }
+
+  .kelly {
+    flex-direction: row-reverse;
+
+    .conteiner-medalha {
+      right: -70%;
+    }
+
+    .sobre {
+      align-items:;
+    }
+  }
+}
+
+@keyframes gira {
+  100% {
+    transform: rotate(-360deg);
   }
 }

@@ -63,8 +63,8 @@ const swiper2 = new Swiper(".swiper-2", {
 const swiper3 = new Swiper(".swiper-3", {
   loop: true,
   navigation: {
-    nextEl: ".custom-next2",
-    prevEl: ".custom-prev2",
+    nextEl: ".custom-next-3",
+    prevEl: ".custom-prev-3",
   },
 
   pagination: {
