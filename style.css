@@ -263,7 +263,7 @@ header {
   opacity: 0.5;
 }
 
-.secao2 {
+.destaques {
   background-color: #f5c8c5;
   position: relative;
   display: flex;
@@ -366,7 +366,7 @@ header {
   }
 }
 
-.secao3 {
+.merece {
   width: 100%;
   height: 100vh;
   background-image: url(./images/secao3-fundo.webp);
@@ -474,7 +474,46 @@ header {
   }
 }
 
-.secao4 {
+.botoes-prvnext {
+  display: flex;
+  gap: 15px;
+
+  button {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fcf4f3;
+    transition: 0.3s;
+    cursor: pointer;
+    path {
+      stroke: #ebb1ba;
+    }
+  }
+
+  button:hover {
+    background-color: #ebb1ba;
+    path {
+      stroke: #fefefe;
+    }
+  }
+}
+
+.swiper-pagination-2,
+.swiper-pagination-3,
+.swiper-pagination-4,
+.swiper-pagination-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2%;
+}
+
+.sevicos {
   width: 100%;
 
   display: flex;
@@ -558,36 +597,6 @@ header {
         font-weight: 400;
         letter-spacing: 6px;
         font-size: 1.5vw;
-      }
-
-      .botoes-prvnext {
-        display: flex;
-        gap: 15px;
-
-        button {
-          width: 48px;
-          height: 48px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          border: none;
-          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-          background-color: #f862bc;
-          background-color: #fcf4f3;
-          transition: 0.3s;
-          cursor: pointer;
-          path {
-            stroke: #ebb1ba;
-          }
-        }
-
-        button:hover {
-          background-color: #ebb1ba;
-          path {
-            stroke: #fefefe;
-          }
-        }
       }
     }
 
@@ -684,7 +693,7 @@ header {
     }
 
     .swiper {
-      padding: 5% 5% 5% 5%;
+      padding: 5% 5% 3% 5%;
     }
 
     .swiper-2,
@@ -692,14 +701,6 @@ header {
       /* background-color: #f862bc; */
       padding: 5% 5% 0 5%;
       margin-bottom: 0;
-    }
-
-    .swiper-pagination-2,
-    .swiper-pagination-3 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 5%;
     }
   }
 
@@ -741,7 +742,7 @@ header {
   }
 }
 
-.secao5 {
+.sobre-nos {
   width: 100%;
   height: 60vh;
   display: flex;
@@ -786,7 +787,7 @@ header {
   }
 }
 
-.secao6 {
+.nossas-especialistas {
   width: 100%;
   height: auto;
   display: flex;
@@ -1011,6 +1012,106 @@ header {
     }
     span:nth-child(2) {
       color: #be8e55;
+    }
+  }
+}
+
+.depoimentos {
+  width: 100%;
+  background-color: #fcf0f3;
+  padding-bottom: 5%;
+
+  .titulo-depoimentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0 0 0;
+
+    h3 {
+      color: #f862bc;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 4vw;
+      color: #3b2740;
+      font-weight: 400;
+      font-family: "Playfair Display", sans-serif;
+
+      span {
+        color: #be8e55;
+        font-style: italic;
+      }
+    }
+
+    .separadores {
+      margin: 2% 0;
+    }
+
+    .flor-svg {
+      path {
+        stroke: #f862bc;
+      }
+    }
+
+    .separador {
+      path {
+        stroke: #3b2740;
+      }
+    }
+  }
+
+  .conteiner-depoimentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1% 5%;
+    width: 100%;
+
+    .botoes-prvnext {
+      justify-content: end;
+      padding-bottom: 3%;
+    }
+  }
+
+  .testimonials {
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 28vw;
+    height: 40vh;
+    border-radius: 50px;
+    padding: 8% 3%;
+
+    .testimonials-rate {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5%;
+
+      .testimonials-stars {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        gap: 5%;
+      }
+    }
+
+    blockquote {
+      padding: 2% 10%;
+
+      p {
+        margin-bottom: 2%;
+        font-style: italic;
+        font-size: 0.8vw;
+      }
+    }
+
+    .testimonials-author {
+      padding: 0 10%;
     }
   }
 }
