@@ -621,6 +621,7 @@ header {
         border: none;
         transition: 0.5s;
         border: #be8e55;
+        cursor: grab;
 
         .destaque {
           background-color: #fcf4f3;
@@ -795,6 +796,7 @@ header {
   align-items: center;
   background-color: #f5c8c5;
   position: relative;
+  padding: 0 10%;
 
   .linhas {
     top: 0%;
@@ -878,7 +880,7 @@ header {
           top: -45%;
 
           .medalha {
-            width: 100%;
+            width: 70%;
             aspect-ratio: 1 / 1;
 
             background-color: rgb(247, 143, 205, 0.2);
@@ -888,10 +890,14 @@ header {
             justify-content: center;
             border-radius: 50%;
             animation: gira 15s linear infinite;
+
+            img {
+              width: 80%;
+            }
           }
 
           .logo {
-            width: 45%;
+            width: 35%;
             aspect-ratio: 1 / 1;
             display: flex;
             align-items: center;
@@ -976,7 +982,7 @@ header {
     .shirlaini {
       .div-esquerda {
         .conteiner-medalha {
-          left: -70%;
+          left: -60%;
         }
       }
     }
@@ -985,7 +991,7 @@ header {
       flex-direction: row-reverse;
 
       .conteiner-medalha {
-        right: -70%;
+        right: -60%;
       }
 
       .sobre {
@@ -1106,13 +1112,132 @@ header {
       p {
         margin-bottom: 2%;
         font-style: italic;
-        font-size: 0.8vw;
+        font-size: 0.9vw;
       }
     }
 
     .testimonials-author {
       padding: 0 10%;
     }
+  }
+}
+
+.localizacao {
+  background-color: #f5c8c5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .titulo-localizacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0 2% 0;
+
+    h3 {
+      color: #f862bc;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 4vw;
+      color: #3b2740;
+      font-weight: 400;
+      font-family: "Playfair Display", sans-serif;
+
+      span {
+        color: #be8e55;
+        font-style: italic;
+      }
+    }
+
+    .separadores {
+      margin: 2% 0;
+    }
+
+    .flor-svg {
+      path {
+        stroke: #f862bc;
+      }
+    }
+
+    .separador {
+      path {
+        stroke: #3b2740;
+      }
+    }
+  }
+
+  .conteiner-localizacao {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      font-weight: 400;
+    }
+
+    iframe {
+      width: 70%;
+      margin: 2% 0 7% 0;
+    }
+  }
+}
+
+.agende {
+  background-color: #d08092;
+  position: relative;
+  width: 100%;
+  height: 60 vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30%;
+  overflow: hidden;
+  padding: 10%;
+
+  .logo {
+    position: absolute;
+    bottom: -10%;
+    right: -2%;
+  }
+
+  .agendar {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 30%;
+
+    h3,
+    p {
+      color: #fefefe;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-family: "Playfair Display", sans-serif;
+      font-size: 2vw;
+      margin-bottom: 5%;
+    }
+  }
+
+  button {
+    background-color: #fefefe;
+    width: 20%;
+    padding: 1.5% 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    font-size: 0.8vw;
+    z-index: 1;
   }
 }
 
