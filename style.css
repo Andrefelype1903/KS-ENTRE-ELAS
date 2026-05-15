@@ -43,6 +43,11 @@ button {
   }
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   width: 100%;
   height: auto;
@@ -73,7 +78,7 @@ header {
         align-items: center;
       }
 
-      button {
+      a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -181,7 +186,7 @@ header {
       }
     }
 
-    button {
+    a {
       background-color: #d29955;
       display: flex;
       align-items: center;
@@ -1228,7 +1233,7 @@ header {
   button {
     background-color: #fefefe;
     width: 20%;
-    padding: 1.5% 2%;
+    padding: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1241,8 +1246,137 @@ header {
   }
 }
 
+footer {
+  background-color: #eea19b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+
+  h3 {
+    font-weight: 400;
+    text-align: start;
+    margin-bottom: 10%;
+  }
+
+  .institucional {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 60%;
+      }
+
+      h2 {
+        font-family: "Playfair Display", sans-serif;
+        font-size: 1.5vw;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      h3 {
+        width: 80%;
+        display: flex;
+        font-weight: 300;
+        letter-spacing: 15%;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+    }
+
+    address {
+      width: 18%;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: center;
+    }
+
+    address:nth-child(2) {
+      .whatsapp,
+      .insta {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+        gap: 5%;
+        margin-bottom: 4%;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+    address:nth-child(3) {
+      div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        img {
+          margin-right: 5%;
+        }
+      }
+    }
+
+    .funcionamento {
+      width: 18%;
+      display: flex;
+      flex-direction: column;
+      justify-content: baseline;
+      align-items: baseline;
+
+      div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        img {
+          margin-right: 5%;
+        }
+      }
+    }
+  }
+
+  .texto-animado {
+    width: max-content;
+    display: flex;
+    gap: 2rem;
+
+    p {
+      font-size: 10vw;
+      font-weight: bolder;
+      font-family: "Playfair Display", sans-serif;
+      color: rgb(255, 255, 255, 0.5);
+      animation: animaTexto 15s linear infinite;
+    }
+  }
+
+  .copyright {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
 @keyframes gira {
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@keyframes animaTexto {
+  100% {
+    transform: translateX(-100%);
   }
 }
