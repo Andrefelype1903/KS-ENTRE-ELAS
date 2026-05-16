@@ -52,6 +52,8 @@ btnLocalizacao.addEventListener("click", () => {
   });
 });
 
+// hero ↓
+
 gsap.from("header ul li", {
   y: 20,
   opacity: 0,
@@ -69,6 +71,37 @@ gsap.from(".hero .draw-me", {
   drawSVG: 0,
 });
 
+gsap.from(".cuidados h3", {
+  y: -15,
+  opacity: 0,
+  duration: 2,
+  stagger: 0.5,
+});
+
+gsap.from(".cuidados p", {
+  x: 15,
+  opacity: 0,
+  duration: 2,
+  stagger: 0.5,
+});
+
+gsap.from(".cuidados img:nth-child(1)", {
+  opacity: 0,
+  duration: 2,
+  stagger: 0.5,
+});
+
+gsap.from(".cuidados .seta", {
+  x: -15,
+  opacity: 0,
+  duration: 2,
+  stagger: 0.5,
+});
+
+// hero ↑
+
+// destaques ↓
+
 gsap.from(".destaques .draw-me", {
   duration: 4,
   drawSVG: 0,
@@ -85,7 +118,7 @@ let destaqueSplit = SplitText.create(".destaques h2", {
 });
 
 gsap.from(destaqueSplit.chars, {
-  opacity: 0,
+  opacity: 0.05,
   stagger: 0.05,
 
   scrollTrigger: {
@@ -93,6 +126,72 @@ gsap.from(destaqueSplit.chars, {
     markers: false,
     start: "20% 80%",
     end: "bottom 70%",
-    // scrub: 1,
+    scrub: 1,
   },
+});
+
+gsap.from(".numero", {
+  y: -20,
+  duration: 1,
+  opacity: 0,
+  stagger: 0.05,
+  scrollTrigger: {
+    trigger: ".numero",
+    markers: false,
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: 1,
+  },
+});
+
+let tituloCardSplit = SplitText.create(".destaque h3", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+gsap.from(tituloCardSplit.chars, {
+  y: 40,
+  duration: 0.5,
+  stagger: 0.05,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".destaque h3",
+    markers: false,
+    start: "top 80%",
+  },
+});
+
+gsap.from(".caixa-informacoes img", {
+  x: -10,
+  duration: 1,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".caixa-informacoes",
+    markers: false,
+    start: "top 80%",
+  },
+});
+
+gsap.from(".caixa-informacoes p", {
+  x: 10,
+  duration: 1,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".caixa-informacoes",
+    markers: false,
+    start: "top 80%",
+  },
+});
+
+// detaques ↑
+
+gsap.from(".merece .draw-me", {
+  duration: 7,
+  drawSVG: 0,
+
+  /* scrollTrigger: {
+    trigger: ".destaques",
+    markers: false,
+    start: "top 80%",
+  }, */
 });
