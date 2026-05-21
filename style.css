@@ -505,8 +505,9 @@ header {
     }
   }
 
-  button {
-    background-color: #d29955;
+  a {
+    background: linear-gradient(-45deg, #d29955, #e8bc7a, #b97a2f, #d29955);
+    background-size: 800% 400%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -517,7 +518,14 @@ header {
     border: none;
     box-shadow: 0 13px 18.4px 0 rgba(0, 0, 0, 0.25);
     color: #fbf2eb;
-    /* font-family: "inter", sans-serif; */
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
+  }
+
+  a:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
   }
 }
 
