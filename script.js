@@ -288,12 +288,12 @@ gsap.from(".titulo-secao4 h2", {
   },
 });
 
-gsap.from(".sevicos .draw-me", {
+gsap.from("#separador-1 .draw-me", {
   duration: 4,
   drawSVG: 0,
 
   scrollTrigger: {
-    trigger: ".sevicos",
+    trigger: ".titulo-secao4",
     markers: false,
     start: "top 70%",
   },
@@ -360,7 +360,390 @@ gsap.from(".slider:nth-child(2) .destaque path", {
   scrollTrigger: {
     trigger: ".slider:nth-child(2) .destaque path",
     markers: false,
+    start: "top 50%",
+  },
+});
+
+gsap.from("#separador-2 .draw-me", {
+  duration: 4,
+  drawSVG: 0,
+
+  scrollTrigger: {
+    trigger: "#separador-2",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from("#destaque-2 path", {
+  drawSVG: 0,
+  duration: 2,
+
+  scrollTrigger: {
+    trigger: "#destaque-2",
+    markers: false,
+    start: "top 50%",
+  },
+});
+
+gsap.from("#separador-3 .draw-me", {
+  duration: 4,
+  drawSVG: 0,
+
+  scrollTrigger: {
+    trigger: "#separador-3",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from("#destaque-3 path", {
+  drawSVG: 0,
+  duration: 2,
+
+  scrollTrigger: {
+    trigger: "#destaque-3",
+    markers: false,
+    start: "top 50%",
+  },
+});
+
+gsap.from("#separador-4 .draw-me", {
+  duration: 4,
+  drawSVG: 0,
+
+  scrollTrigger: {
+    trigger: "#separador-4",
+    markers: false,
     start: "top 80%",
+  },
+});
+
+let cuide = SplitText.create(".cuide h2", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+gsap.from(cuide.chars, {
+  y: 100,
+  opacity: 0,
+  duration: 0.5,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".cuide h2",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+// serviços ↑
+
+// sobre nós ↓
+
+let sobreNosH3 = SplitText.create(".sobre-nos h3", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+let sobreNosH2 = SplitText.create(".sobre-nos h2", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+let sobreNosP = SplitText.create(".sobre-nos p", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+gsap.from(sobreNosH3.chars, {
+  x: 10,
+  opacity: 0,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".sobre-nos h3",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(sobreNosH2.chars, {
+  x: 10,
+  opacity: 0,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".sobre-nos h3",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(sobreNosP.chars, {
+  // x: 20,
+  opacity: 0,
+  stagger: 1,
+
+  scrollTrigger: {
+    trigger: ".sobre-nos p",
+    markers: false,
+    start: "top 95%",
     end: "bottom 60%",
+    scrub: 1,
+  },
+});
+
+// sobre nós ↑
+
+// especialistas ↓
+
+gsap.from(".titulo-secao6 h3", {
+  y: -20,
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".titulo-secao6",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from(".titulo-secao6 h2", {
+  y: 20,
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".titulo-secao6",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from(".titulo-secao6 .separadores .draw-me", {
+  duration: 4,
+  drawSVG: 0,
+
+  scrollTrigger: {
+    trigger: ".titulo-secao6",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+let shirlainiH3 = SplitText.create(".shirlaini h3", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+let shirlainiH2 = SplitText.create(".shirlaini h2", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+let shirlainiP = SplitText.create(".shirlaini p", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+let kellyH3 = SplitText.create(".kelly h3", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+let kellyH2 = SplitText.create(".kelly h2", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+let kellyP = SplitText.create(".kelly p", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+gsap.from(shirlainiH3.chars, {
+  x: 10,
+  opacity: 0,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".shirlaini h3",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(shirlainiH2.chars, {
+  x: 10,
+  opacity: 0,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".shirlaini h2",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(shirlainiP.chars, {
+  // x: 20,
+  opacity: 0,
+  stagger: 1,
+
+  scrollTrigger: {
+    trigger: ".shirlaini p",
+    markers: false,
+    start: "top 95%",
+    end: "bottom 60%",
+    scrub: 2,
+  },
+});
+
+gsap.from(kellyH3.chars, {
+  x: 10,
+  opacity: 0,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".kelly h3",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(kellyH2.chars, {
+  x: 10,
+  opacity: 0,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".kelly h2",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(kellyP.chars, {
+  // x: 20,
+  opacity: 0,
+  stagger: 1,
+
+  scrollTrigger: {
+    trigger: ".kelly p",
+    markers: false,
+    start: "top 95%",
+    end: "bottom 60%",
+    scrub: 2,
+  },
+});
+
+let textoEspecialistasH2 = SplitText.create(".texto-especialistas h2", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+gsap.from(textoEspecialistasH2.chars, {
+  y: 100,
+  opacity: 0,
+  duration: 0.5,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".texto-especialistas h2",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".texto-especialistas .separadores .draw-me", {
+  duration: 4,
+  drawSVG: 0,
+
+  scrollTrigger: {
+    trigger: ".texto-especialistas .separadores",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+// especialistas ↑
+
+// depoimentos ↓
+
+gsap.from(".titulo-depoimentos h3", {
+  y: -20,
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".titulo-depoimentos",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from(".titulo-depoimentos h2", {
+  y: 20,
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".titulo-depoimentos",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from(".titulo-depoimentos .separadores .draw-me", {
+  duration: 4,
+  drawSVG: 0,
+
+  scrollTrigger: {
+    trigger: ".titulo-depoimentos",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from(".testimonials:nth-child(1) svg", {
+  opacity: 0,
+  scale: 0,
+  duration: 0.5,
+  stagger: 0.2,
+  ease: "back.out(1.7)",
+
+  scrollTrigger: {
+    trigger: ".swiper-4",
+    markers: false,
+    start: "top 80%",
+    end: "bottom 50%",
+  },
+});
+
+gsap.from(".testimonials:nth-child(2) svg", {
+  opacity: 0,
+  scale: 0,
+  duration: 0.5,
+  stagger: 0.2,
+  ease: "back.out(1.7)",
+
+  scrollTrigger: {
+    trigger: ".swiper-5",
+    markers: false,
+    start: "top 80%",
   },
 });
