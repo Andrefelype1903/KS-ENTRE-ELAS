@@ -117,6 +117,29 @@ header {
   }
 }
 
+.pre-loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f862bc;
+  z-index: 2;
+
+  svg {
+    width: 30%;
+    height: auto;
+
+    .letras-preLoader {
+      stroke-dasharray: 2160px;
+      stroke-dashoffset: 2160px;
+      fill: rgb(254, 254, 254, 0.2);
+      stroke: #fefefe;
+    }
+  }
+}
+
 .hero {
   width: 100%;
   height: 100vh;
