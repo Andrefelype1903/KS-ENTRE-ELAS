@@ -719,7 +719,7 @@ gsap.from(".titulo-depoimentos .separadores .draw-me", {
   },
 });
 
-gsap.from(".testimonials:nth-child(1) svg", {
+gsap.from(".swiper-4 svg", {
   opacity: 0,
   scale: 0,
   duration: 0.5,
@@ -729,12 +729,38 @@ gsap.from(".testimonials:nth-child(1) svg", {
   scrollTrigger: {
     trigger: ".swiper-4",
     markers: false,
-    start: "top 80%",
-    end: "bottom 50%",
+    start: "top 90%",
+    end: "bottom 70%",
   },
 });
 
-gsap.from(".testimonials:nth-child(2) svg", {
+gsap.from(".swiper-4 blockquote", {
+  opacity: 0,
+  duration: 2,
+
+  scrollTrigger: {
+    trigger: ".swiper-4",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 70%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".swiper-5 blockquote", {
+  opacity: 0,
+  duration: 2,
+
+  scrollTrigger: {
+    trigger: ".swiper-5",
+    markers: false,
+    start: "top 80%",
+    end: "bottom 50%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".swiper-5 svg", {
   opacity: 0,
   scale: 0,
   duration: 0.5,
@@ -745,5 +771,141 @@ gsap.from(".testimonials:nth-child(2) svg", {
     trigger: ".swiper-5",
     markers: false,
     start: "top 80%",
+  },
+});
+
+// depoimentos ↑
+
+// localização ↓
+
+gsap.from(".localizacao .titulo-localizacao h3", {
+  y: -20,
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".titulo-localizacao",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from(".localizacao h2", {
+  y: 20,
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".titulo-localizacao",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.from(".localizacao .separadores .draw-me", {
+  duration: 4,
+  drawSVG: 0,
+
+  scrollTrigger: {
+    trigger: ".titulo-localizacao",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+let localizaçãoText = SplitText.create(".conteiner-localizacao h3", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+gsap.from(localizaçãoText.chars, {
+  // x: 20,
+  opacity: 0,
+  stagger: 0.05,
+  duration: 0.01,
+
+  scrollTrigger: {
+    trigger: ".conteiner-localizacao h3",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+// localização ↑
+
+// agende ↓
+
+gsap.from(".agende path", {
+  drawSVG: 0,
+  duration: 5,
+
+  scrollTrigger: {
+    trigger: ".agende .logo",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+gsap.to(".agende .letra-logo", {
+  fill: "#FEFEFE",
+  duration: 5,
+  fillOpacity: 0.15,
+
+  scrollTrigger: {
+    trigger: ".agende .logo",
+    markers: false,
+    start: "top 70%",
+  },
+});
+
+let textoAgendeH3 = SplitText.create(".agende h3", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+let textoAgendeP = SplitText.create(".agende p", {
+  type: "lines, words, chars",
+  mask: "lines",
+});
+
+gsap.from(textoAgendeH3.chars, {
+  y: 100,
+  opacity: 0,
+  duration: 0.5,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".agende h3",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(textoAgendeP.chars, {
+  y: 100,
+  opacity: 0,
+  duration: 0.5,
+  stagger: 0.05,
+
+  scrollTrigger: {
+    trigger: ".agende p",
+    markers: false,
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".institucional", {
+  y: 20,
+  opacity: 0,
+  duration: 2,
+
+  scrollTrigger: {
+    trigger: ".institucional",
+    markers: false,
+    start: "top 90%",
+    end: "80% 70%",
+    scrub: 1,
   },
 });

@@ -1182,30 +1182,6 @@ header {
         display: flex;
         justify-content: end;
         gap: 5%;
-
-        /* svg {
-          opacity: 0;
-          animation: stars 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-        }
-
-        .stars:nth-child(1) svg {
-          animation-delay: 0.2s;
-        }
-        .stars:nth-child(2) svg {
-          animation-delay: 0.4s;
-        }
-        .stars:nth-child(3) svg {
-          animation-delay: 0.6s;
-        }
-        .stars:nth-child(4) svg {
-          animation-delay: 0.8s;
-        }
-        .stars:nth-child(5) svg {
-          animation-delay: 1s;
-        }
-        .stars:nth-child(6) svg {
-          animation-delay: 1.2s;
-        } */
       }
     }
 
@@ -1329,8 +1305,16 @@ header {
     }
   }
 
-  button {
-    background-color: #fefefe;
+  a {
+    background: linear-gradient(
+      -45deg,
+      #fefefe,
+      #fff6fb,
+      #f6e4ee,
+      #ffffff,
+      #f7c1c1
+    );
+    background-size: 800% 400%;
     width: 20%;
     padding: 1%;
     display: flex;
@@ -1341,7 +1325,14 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     font-size: 0.8vw;
+    transition: all 0.5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
     z-index: 1;
+  }
+
+  a:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
   }
 }
 
@@ -1491,17 +1482,5 @@ footer {
 
   100% {
     background-position: 0% 50%;
-  }
-}
-
-@keyframes stars {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
   }
 }
