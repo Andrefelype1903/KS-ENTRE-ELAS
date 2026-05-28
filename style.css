@@ -44,6 +44,7 @@ button {
 
     svg {
       width: 100%;
+      height: auto;
       stroke: #fff;
     }
   }
@@ -329,7 +330,7 @@ header {
   position: absolute;
   width: 100%;
   top: -10%;
-  z-index: 0;
+  z-index: 1;
   opacity: 0.5;
 }
 
@@ -378,6 +379,7 @@ header {
       align-items: center;
       justify-content: space-between;
       margin: 0 0 5% 0;
+      z-index: 2;
 
       .destaque {
         width: 30%;
@@ -850,7 +852,7 @@ header {
     flex-direction: column;
     align-items: baseline;
     justify-content: center;
-    padding: 8%;
+    padding: 6%;
     gap: 10%;
   }
 
@@ -882,7 +884,7 @@ header {
   align-items: center;
   background-color: #f5c8c5;
   position: relative;
-  padding: 0 10%;
+  padding: 0 6%;
 
   .linhas {
     top: 0%;
@@ -1482,6 +1484,8 @@ footer {
   }
 }
 
+/* Animações ↓ */
+
 @keyframes gira {
   100% {
     transform: rotate(-360deg);
@@ -1505,5 +1509,44 @@ footer {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* Animaçoes ↑ */
+
+/* Media Queries ↓ */
+
+@media (min-width: 1440px) {
+  header nav ul li {
+    font-size: 1.3vw;
+  }
+
+  .hero .cuidados .cuidado .parte p,
+  .hero .titulo-nome .momento p {
+    font-size: 1.1vw;
+    /* color: red; */
+  }
+
+  .separadores .flor-svg svg {
+    width: 45px;
+    height: auto;
+  }
+
+  .destaques
+    .conteiner-destaques
+    .destaque
+    .caixa-informacoes
+    .informacoes-destaque
+    p,
+  .sobre-nos .texto,
+  .nossas-especialistas .especialistas .especialista .sobre .texto-sobre p,
+  .depoimentos .testimonials blockquote p {
+    font-size: 1.2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav ul li {
+    font-size: 0.9vw;
   }
 }
